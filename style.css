@@ -255,5 +255,253 @@ cursor: pointer;
 
 /**************/
 
+/********** Instagram - section ************/
 
+.instagram__content{
+    text-align: center;
+    
+}
+.instagram__content h2{
+    font-size: 2.5rem;
+    
+}
+.instagram__content p{
+    font-size: 1.2rem;
+    margin: -0.6rem 0 1rem;
+}
+.instagram__pics{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    
+}
 
+.insta-pic-container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+}
+.insta-pic-container:hover img{
+    filter: hue-rotate(90deg);
+    transition: filter 0.4s ease-in-out;
+}
+.insta-pic-container img{
+    width: 100%;
+}
+.insta-icon{
+    position: absolute;
+    font-size: 3.5rem;
+    color: white;
+    opacity: 0;
+}
+.insta-pic-container:hover .insta-icon{
+    opacity: 1;
+    transition: opacity 0.4s ease-in-out;
+}
+
+/**** instagram-section For Pc ***/
+
+@media screen and (min-width: 800px) {
+    .instagram__pics{
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+    }
+}
+
+/**************** Header ******* 
+/////Main-Menu */
+.menu-container{
+    background: linear-gradient(rgba(0, 0, 0, 0.605),rgba(0, 0, 0, 0.637)),url("/images/header.jpg");
+    background-position: center center;
+    background-size: cover;
+    color: white;
+    padding: 1rem;
+ 
+    
+}
+.menu-content{
+    display: flex;
+    justify-content:space-between;
+}
+.menu{
+    list-style-type: none;
+    text-align: center;
+    padding: 1rem;
+    margin: 0.5rem;
+}
+.main-menu{
+    background-color: black;
+    display: none;
+}
+.menu-mobile{
+    display: block;
+    position: absolute;
+    width: 100vw;
+    top: 4.1rem;
+    right: -0.5rem;
+}
+.menu-item{
+    margin: 1.5rem auto;
+    border-bottom: none;
+    font-weight: bold;
+   cursor: pointer;
+   position: relative;
+    
+}
+.active a:visited{
+    color: var(--green)
+    
+}
+
+.menu-item a{
+    color: white;
+    text-decoration: none;
+}
+.border-bottom{
+    border-bottom: var(--green) 2.5px solid;
+    width: 0px;
+  
+    margin: 0.3rem auto;
+    position: absolute;
+    left: 40%;
+}
+.menu-item:hover .border-bottom{
+    width: 90px;
+    transition: width 0.4s ease-in-out;
+}
+
+.main-heading{
+    font-size: 1.5rem;
+    letter-spacing: 5px;
+    margin-top: 0.6rem;
+}
+.menu__icon i{
+    font-size: 1.5rem;
+    border: 1px solid white;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+.menu__icon:hover{
+    background-color: white;
+    color: black;
+    transition: background-color 0.4s ease-in-out;
+    transition: color 0.4s ease-in-out;
+}
+
+/*** Main-menu (for pc)---*/
+@media screen and (min-width: 1000px) {
+    .menu__icon{
+        display: none;
+    }
+    .main-menu{
+        
+        background-color: transparent;
+        display: block;
+        text-align: center;
+    }
+    .menu-item{
+        display: inline-block;   
+        margin:0 0 0 4.5rem;
+        
+    }
+ 
+    .border-bottom{
+        transform: translateX(-40px);    
+    }
+    .main-heading{
+        margin-top: 1.3rem;
+    }
+}
+@media screen and (min-width: 700px) {
+    .border-bottom{
+        left: 45%;
+    }
+}
+
+/*** header-content **/
+.profile-container{
+    display: flex;
+    justify-content: center;
+}
+.profile-pic{
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    object-fit: cover;
+    margin: auto;
+    border: 2px solid white;
+    padding: 0.3rem;
+    background-color: white;
+    margin-top: 2rem;
+}
+.header__content{
+    text-align: center;
+    margin: 2rem auto;
+    width: 70%;
+
+}
+.header__content h1{
+    color: greenyellow;
+    font-size: 2.7rem;
+}
+.skills{
+    background: rgba(180, 180, 180, 0.137);
+    width: 50%;
+    margin: 2rem auto;
+    font-size: 1.1rem;
+    font-weight: 100;
+    color: rgb(212, 212, 212);
+    letter-spacing: 2px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.content__para{
+    font-size: 1.3rem;
+    color: rgb(190, 190, 190);
+}
+.content__writer{
+    margin-top: -2rem;
+    word-spacing: 2px;
+    letter-spacing: 4px;
+    color: green;
+    font-size: 0.8rem;
+}
+
+@media screen and (min-width: 1000px) {
+    .content__para{
+        width: 67vw;
+        margin: auto;
+        
+    }
+   
+}
+
+/*** Social Icons **/
+.header__social-icons{
+    text-align: center;
+    margin-top: -1.5rem;
+    display: none;
+}
+header .social-icon{
+    font-size: 2.4rem;
+    margin: 1rem;
+    border-radius: 100%;
+    border: white 1px solid;
+    padding: 0.4rem;
+    cursor: pointer;
+}
+header .social-icon:hover{
+    background-color: rgb(13, 193, 13);
+    transition: background-color 0.2s ease-in-out;
+}
+
+/** social-icons (for Pc) **/
+@media screen and (min-width: 600px) {
+    .header__social-icons{
+        display: block;
+    }
+    .skills{
+        font-size: 1.6rem;
+    }
+}
