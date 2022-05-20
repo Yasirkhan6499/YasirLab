@@ -442,8 +442,8 @@ cursor: pointer;
     width: 70%;
 
 }
-.header__content h1{
-    color: greenyellow;
+.title-name{
+    color: rgb(134, 212, 16);
     font-size: 2.7rem;
 }
 .skills{
@@ -503,5 +503,60 @@ header .social-icon:hover{
     }
     .skills{
         font-size: 1.6rem;
+    }
+}
+
+/********* Footer ************/
+
+footer{
+    background-color: black;
+    text-align: center;
+    padding: 3rem;
+   
+}
+.footer-content{
+    display: flex;
+    flex-direction: column;
+}
+.copyright{
+    font-size: 0.8rem;
+    margin-top: 2rem;
+    color: white;
+}
+.subscription p:first-of-type{
+    color: white;
+    font-weight: bolder;
+    margin-bottom: -1rem;
+    font-size: 1.2rem;
+}
+.email-icon{
+    color: white;
+    fill: white;
+    font-size: 2rem;
+    transform: translateY(7px);
+   
+}
+.subscription{
+    margin-top: 1rem;
+}
+.subscription form button{
+    padding: 1rem;
+    background-color: var(--green);
+    color: black;
+    font-weight: bolder;
+}
+@media screen and (min-width: 1000px) {
+    .footer-content{
+        flex-direction: row;
+        gap: 5rem;
+        justify-content: center;
+    }
+    .footer__title-content p{
+        width: 50ch;
+        margin: auto;
+    }
+    .subscription p{
+        width: 50ch;
+        margin: auto;
     }
 }
