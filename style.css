@@ -22,6 +22,7 @@ p{
 }
 
 
+
 @media screen and (min-width: 1200px) {
     .container{
         max-width: 90%;
@@ -559,4 +560,136 @@ footer{
         width: 50ch;
         margin: auto;
     }
+}
+
+
+/******** Blog-Section **********/
+
+.blog-section{
+    display: grid;
+    gap: 4rem 1.5rem;
+    margin: 2rem;
+}
+.blog-container{
+    background-color: rgba(236, 236, 236, 0.39);
+  
+    padding: 1rem;
+}
+.blog-container img{
+    width: 100%;
+}
+.blog-container button:first-of-type{
+    background: var(--green);
+    color: white;
+    padding: 0.8rem;
+    border-radius: 0.5rem;
+    outline: none;
+    border: none;
+    font-size:  1rem;
+    margin: 1rem;
+    text-transform: capitalize;
+}
+.published-date{
+    color: black;
+    margin: -1rem 0 0.7rem;
+}
+.blog__title{
+   
+    margin-left: 0.8rem;
+    font-size: 1.4rem;
+    font-weight: 800;
+    
+}
+
+@media screen and (min-width: 1000px){
+    .blog-section{
+
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media screen and (min-width: 1300px){
+    .blog-section{
+
+        grid-template-columns: repeat(4,1fr);
+
+        grid-template-areas: 
+        "header1 header1 header2 header2"
+        "main main main main" ;
+    }
+    .two-columns-space1{
+        grid-area: header1;
+    }
+    .two-columns-space2{
+        grid-area: header2;
+    }
+    
+}
+
+
+/************ Contact- section*************/
+
+.contact-section{
+    text-align: center;
+    padding: 2rem;
+}
+.contact__header h2{
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+.contact__header p{
+    color: rgb(99, 99, 99);
+}
+.contact__body{
+    
+    color: white;
+    display: grid;
+    gap: 1.5rem;
+   
+    
+}
+.contact__box{
+    background-color: black;
+   padding: 2rem;
+    
+}
+
+/*** Contact-section (for PC)****/
+@media screen and (min-width: 678px) {
+    .contact__body{
+    
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media screen and (min-width: 988px) {
+    .contact__body{
+    
+        grid-template-columns: repeat(4,1fr);
+    }
+    .gridx2{
+        grid-template-columns: repeat(2,1fr);
+        gap: 3rem;
+    }
+}
+
+/*** Contact__Form***/
+.contact__form{
+    margin:5rem 2rem;
+}
+.contact__form input, .contact__form textarea{
+    display: block;
+    padding: 1rem;
+    margin-top: 2rem;
+    width: 100%;
+}
+.contact__form .btn{
+    margin-top: 2rem;
+    float: left;
+    clear: all;
+}
+.gridx2{
+    display: grid;
+}
+.contact__map{
+    margin-top: 8rem;
+    
 }
