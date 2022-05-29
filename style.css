@@ -149,12 +149,17 @@ opacity: 1;
     font-weight: 500;
 
     cursor: pointer;
+
+    z-index: 30;
+}
+.cancel-btn:hover{
+    color: white;
 }
 
 /******** Work- Section ************/
 .work-section{
     display: grid;
-    
+    margin: 2rem 0.6rem;
 }
 .work__card{
     background-image: url("/images/project-main.jpg");
@@ -259,21 +264,28 @@ cursor: pointer;
 /********** Instagram - section ************/
 
 .instagram__content{
+    
     text-align: center;
+    margin: auto auto 2rem;
+    
     
 }
 .instagram__content h2{
-    font-size: 2.5rem;
     
+    font-size: 2.5rem;
+
 }
 .instagram__content p{
     font-size: 1.2rem;
     margin: -0.6rem 0 1rem;
+  
 }
 .instagram__pics{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    
+    justify-content: center;
+   
+   
 }
 
 .insta-pic-container{
@@ -281,8 +293,8 @@ cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    margin: auto;
+   
+    
 }
 .insta-pic-container:hover img{
     filter: hue-rotate(90deg);
@@ -290,6 +302,7 @@ cursor: pointer;
 }
 .insta-pic-container img{
     width: 100%;
+    
 }
 .insta-icon{
     position: absolute;
@@ -307,7 +320,7 @@ cursor: pointer;
 @media screen and (min-width: 800px) {
     .instagram__pics{
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(1, 1fr);
+       
     }
 }
 
@@ -319,7 +332,7 @@ cursor: pointer;
     background-size: cover;
     color: white;
     padding: 1rem;
- 
+    margin-bottom: 2rem;
     
 }
 .menu-content{
@@ -669,6 +682,10 @@ footer{
         grid-template-columns: repeat(2,1fr);
         gap: 3rem;
     }
+    .contact__map{
+        margin-top: 8rem;
+        
+    }
 }
 
 /*** Contact__Form***/
@@ -688,8 +705,4 @@ footer{
 }
 .gridx2{
     display: grid;
-}
-.contact__map{
-    margin-top: 8rem;
-    
 }

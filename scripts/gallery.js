@@ -1,3 +1,5 @@
+const header = document.querySelector(".menu-container");
+
 const slider_container = document.querySelector(".slider-container");
 const slider = document.querySelector(".slider");
 const slider_imgs = (document.querySelectorAll(".slider__img"));
@@ -85,6 +87,8 @@ function setSliderWidth(width,height){
 // ---------Adjusting the slider position----------
 adjustSliderPos();
 
+
+
 function adjustSliderPos(){
 
     slider.style.left = "-"+slider_imgs[1].style.left;
@@ -104,6 +108,7 @@ function adjustSliderPos(){
    slider_container.style.left =  10+"vw";
     
 }
+
 
 
 window.addEventListener("resize",adjustSliderPos);
@@ -233,6 +238,9 @@ function adjustElementsInSliderArr(){
   imageClicked(); 
 
   function imageClicked(){
+
+
+
       for(let i=0; i<images_boxs.length; i++){
           images_boxs[i].addEventListener("click",()=>{
             
@@ -243,7 +251,14 @@ function adjustElementsInSliderArr(){
 
             adjustSliderPos(); //when the slider is shown, adjust its position in the middel of the screen
 
+
             turnOffScrolling(); //Turn off scrolling 
+
+                            // make the header section display none, when slider is visible
+//its because the slider wont appear when there is header section
+headerDisplayNone();
+
+
         });
       }
     
@@ -263,6 +278,12 @@ function adjustElementsInSliderArr(){
      }
   });
 
+  function headerDisplayNone(){
+      if(isImageclicked)
+    header.style.display = "none";
+    else
+    header.style.display = "block";
+}
   //------------------------------------------
 
   //---- The slider will go to the selected image before getting visible on screen
@@ -301,6 +322,7 @@ function adjustElementsInSliderArr(){
            //---- user can start scrolling again---
            isImageclicked = false;
           
+           headerDisplayNone(); 
 
     });
 
